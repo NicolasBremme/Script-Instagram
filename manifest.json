@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+    "name": "Instagram Script",
+    "version": "2.0",
+    "description": "Instagram Script",
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    },
+    "browser_action": {
+        "default_popup" : "html/popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "activeTab", 
+        "storage", 
+        "http://localhost/*",
+		"http://instagram.com/*",
+		"https://instagram.com/*",
+		"http://*.instagram.com/*",
+		"https://*.instagram.com/*",
+		"http://www.instagram.com/*",
+		"https://www.instagram.com/*"
+    ],
+    "content_security_policy": "script-src 'self' https://use.fontawesome.com/releases/v5.15.3/js/all.js; object-src 'self'",
+    "web_accessible_resources": [
+        "js/popup.js",
+        "js/rules.js",
+        "js/script/utility.js",
+        "js/script/follow.js",
+        "js/script/unfollow.js",
+        "https://use.fontawesome.com/releases/v5.15.3/js/all.js"
+    ]
+}

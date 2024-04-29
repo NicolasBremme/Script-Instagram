@@ -1,0 +1,85 @@
+<html style="width: 300px;">
+
+<head>
+    <script src="../js/popup.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest" /></script>
+    <link rel="stylesheet" href="../css/skeleton.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <!-- Stop button -->
+    <div id="stop-script" class="container" style="display: none; text-align: center;">
+        <h2 id="title">RUNNING...</h2>
+        <div class="row">
+            <button name="stop-btn">Stop</button>
+        </div>
+    </div>
+    <!-- Settings & triggers -->
+    <div id="main" class="container">
+        <div class="row">
+            <button name="script" action="follow" style="width: 58%"> FOLLOW </button>
+            <button name="settings" action="follow" style="width: 38%; float: right;">
+                <i style="pointer-events: none;" class="fas fa-cog"></i>
+            </button>
+        </div>
+        <div style="height: 5px; display: block;"></div>
+        <div class="row">
+            <button name="script" action="unfollow" style="width: 58%"> UNFOLLOW </button>
+            <button name="settings" action="unfollow" style="width: 38%; float: right;">
+                <i style="pointer-events: none;" class="fas fa-cog"></i>
+            </button>
+        </div>
+        <div style="height: 5px; display: block;"></div>
+        Actions per day :
+        <div class="row">
+            <input id="slider1" name="onchange" type="range" value=150 min=1 max=1000></input>
+            <input id="slider1Display" name="onchange" class="ignore" type="number" value=150 min=1 max=1000
+                style="width: 75px;"></input>
+        </div>
+        <div id="settingsFollow" style="display: block;">
+            Follows per cycle :
+            <div class="row">
+                <input name="onchange" id="follow1" type="number" value=5 min=1 max=999></input> -
+                <input name="onchange" id="follow2" type="number" value=7 min=1 max=999></input>
+            </div>
+            Sleep time between cycle :
+            <div class="row">
+                <input name="onchange" id="sleep1" type="number" value=5 min=1 max=99></input> min -
+                <input name="onchange" id="sleep2" type="number" value=7 min=1 max=99></input> min
+            </div>
+        </div>
+        <div id="settingsUnfollow" style="display: none;">
+            Unfollow per cycle :
+            <div class="row">
+                <input id="unfollowPerCycle" name="onchange" type="number" value=10 min=1 max=99></input>
+                <label class="checkboxContainer margin-left-30" style="display: inline;">Mass unfollow
+                    <input id="/unfollowPerCycle" name="no-limit" type="checkbox" />
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            Sleep time between cycle :
+            <div class="row">
+                <input name="onchange" id="sleep3" type="number" value=5 min=1 max=99></input> min -
+                <input name="onchange" id="sleep4" type="number" value=10 min=1 max=99></input> min
+            </div>
+            <div class="row">
+                <label class="checkboxContainer">Unfollow certified account and people who follows you
+                    <input name="forceUnfollow" type="checkbox"></input>
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="row">
+                <label class="checkboxContainer">Smart unfollow (only for the follow script)
+                    <input name="smartUnfollow" type="checkbox"></input>
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <span name="daysUnfollow" style="display: none;">Days Before unfollow :</span>
+            <div name="daysUnfollow" class="row" style="display: none;">
+                <input name="onchange" type="number" value=3 min=1 max=9></input>
+            </div>
+        </div>
+    </div>
+</body>

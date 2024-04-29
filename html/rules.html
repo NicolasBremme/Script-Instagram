@@ -1,0 +1,66 @@
+<style>
+    #customRules {
+        bottom: 10px;
+        left: 10px;
+        right: 60%;
+        min-width: 500px;
+        position: fixed;
+        z-index: 150;
+        background-color: #ffff;
+        border: rgb(207, 217, 222) 1px solid;
+        border-radius: 16px;
+        padding: 10px;
+        color: black;
+    }
+
+    .customHead {
+        border-bottom: rgb(207, 217, 222) 1px solid;
+        padding: 10px;
+    }
+
+    .customTitle {
+        width: 180px;
+        display: inline-block;
+        margin: 5px 0 10px 0;
+        color: black;
+        font-size: 18px;
+    }
+
+    .customClose {
+        width: 22px;
+        height: 22px;
+        border-radius: 8px;
+        border: rgb(207, 217, 222) 1px solid;
+        display: inline-block;
+        margin-left: calc(100% - 180px - 30px);
+        background-color: white;
+        color: red;
+        cursor: pointer;
+    }
+
+    .customClose:hover {
+        background-color: rgb(184, 184, 184);
+    }
+
+    .customBody {
+        padding: 10px;
+    }
+
+    .customBody > p {
+        font-size: 14px;
+    }
+</style>
+<div id="customRules">
+    <div class="customHead">
+        <h3 class="customTitle">Disclaimer :</h3>
+        <button class="customClose">X</button>
+    </div>
+    <div class="customBody">
+        <p>- Follow/Unfollow limit per day:
+        <p>Starting at around 50 and progressively incressing every week to a maximum of 200. (+50 per week)</p>
+        <p>(note: follow and unfollow count as the same action)</p>
+        <p>- Disclaimer:</p>
+        <p>Be carefull when using this extension, bad parameters can definitively get you ban. If you're not sure about what you're doing, you should use the default configuration.</p>
+        <p>(note: even the default config is not 100% safe)</p>
+    </div>
+</div>
