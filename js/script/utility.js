@@ -136,9 +136,6 @@ function stopRunning() {
 async function waitForNextCycle() {
     let idleTime = Math.round(getRandom(sleepMin, sleepMax));
 
-    // DEMO
-    idleTime = 65;
-
     while (idleTime > 0) {
         if (forceStop) {
             stopMethod();
